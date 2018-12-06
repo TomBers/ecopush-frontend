@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ecopush</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Main Navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <!-- Navbar Header-->
+              <div class="navbar-header">
+                <!-- Navbar Brand --><a href="/" class="navbar-brand d-none d-sm-inline-block">
+                  <img height="30px" src="logo.png"</a>
+                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+              </div>
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Logout    -->
+                 <li class="nav-item">
+                        <a href="/auth/sessions/signout/N6EHH7GQEUAKKX2ZA2R7XGXI6W7L6J6I26WUI4NZSLAGN4XPYJ2A%3D%3D%3D%3D" class="nav-link logout"><span class="d-none d-sm-inline">Logout</span><i class="fas fa-sign-out-alt"></i></a>
+                 </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar shrinked">
+          <ul class="list-unstyled">
+                <li><a href="/"> <i class="fas fa-home"></i>Home </a></li>
+                <li><a href="/devices"> <i class="fas fa-microchip"></i>My devices</a></li>
+                <li><a href="/price/history/dates"> <i class="fas fa-money-bill-alt"></i>Price data</a></li>
+                <li><a href="/green/history/dates"> <i class="fas fa-tree"></i>Emission data</a></li>
+          </ul>
+        </nav>
+
+        <div class="content-inner">
+                       <main role="main">
+
+  <!-- Page Header-->
+  <header class="page-header">
+    <div class="container-fluid">
+      <h2 class="no-margin-bottom">Forecast dashboard</h2>
+    </div>
+  </header>
+  <!-- Dashboard Counts Section-->
+  <section class="dashboard-counts no-padding-bottom">
+    <div class="container-fluid">
+         <div class="row bg-white has-shadow">
+            <span><a class="btn btn-default btn-xs" href="/setup/location">Setup Account</a></span>
+         </div>
+
+      <br />
+      <div class="row bg-white has-shadow">
+        <!-- Item -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="item d-flex align-items-center">
+            <div class="icon bg-violet"><i class="icon-user"></i></div>
+            <div class="title"><span>My<br> Devices</span>
+              <div class="progress">
+                <div role="progressbar" style="width: 100%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
+              </div>
+            </div>
+            <div class="number"><strong>3</strong></div>
+          </div>
+        </div>
+        <!-- Item -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="item d-flex align-items-center">
+            <div class="icon bg-red"><i class="icon-padnote"></i></div>
+            <div class="title"><span>Carbon<br>Intensity</span>
+              <div class="progress">
+                <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+              </div>
+            </div>
+            <div class="number"><strong>294</strong> <br/><small>gCO2/kWh</small></div>
+          </div>
+        </div>
+        <!-- Item -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="item d-flex align-items-center">
+            <div class="icon bg-green"><i class="icon-bill"></i></div>
+            <div class="title"><span>Renewable<br>Production</span>
+              <div class="progress">
+                <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
+              </div>
+            </div>
+            <div class="number"><strong>6.78 GW</strong></div>
+          </div>
+        </div>
+        <!-- Item -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="item d-flex align-items-center">
+            <div class="icon bg-orange"><i class="icon-check"></i></div>
+            <div class="title"><span>Solar<br>production</span>
+              <div class="progress">
+                <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
+              </div>
+            </div>
+            <div class="number"><strong>2.76 GW</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Dashboard Header Section    -->
+  <section class="dashboard-header">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Statistics -->
+        <!-- Line Chart            -->
+        <div class="chart col-lg-6 col-12">
+          <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+            <canvas id="carbonChart"></canvas>
+            <script>
+            $(document).ready(function () {
+                window.drawCarbonGraph("#carbonChart", window.dayLabels(), "Carbon (gCo2 per kWh)", [251,252,244,242,240,240,240,241,242,240,224,234,246,252,256,255,256,257,256,261,265,262,264,262,259,255,253,251,249,242,235,237,236,238,239,240,239,237,234,232,234,226,218,197,186,179,174,165], "#44c384")
+             })
+            </script>
+          </div>
+        </div>
+         <!-- Line Chart            -->
+        <div class="chart col-lg-6 col-12">
+          <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+            <canvas id="priceChart"></canvas>
+            <script>
+                $(document).ready(function () {
+                    window.drawCarbonGraph("#priceChart", window.dayLabels(), "Price (p per kWh)", [6.2,6.2,6.2,6.2,5.76,5.76,5.62,5.62,6.42,6.5,7.2,6.88,7.32,7.34,9.4,9.4,9.2,9.22,7.74,7.74,7.23,7.24,7.31,7.31,6.49,6.48,6.4,6.4,6.4,6.4,19.54,21.14,23.58,23.58,22.95,23,11.3,11.3,8.95,8.83,8.4,8,7.3,7.1,7,7.09,7.12,6.9], "#4544c3")
+                 })
+                </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>            </main>
+
+          <!-- Page Footer-->
+          <footer class="main-footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Ecopush &copy; 2017-2019</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div>
+              </div>
+            </div>
+          </footer>
+
+         </div>
+        </div>
+      </div>
+    <script src="/js/app.js"></script>
+  <iframe src="/phoenix/live_reload/frame" style="display: none;"></iframe>
+</body>
+</html>
