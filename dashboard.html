@@ -10,10 +10,13 @@
     <meta name="robots" content="all,follow">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -32,8 +35,9 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="/" class="navbar-brand d-none d-sm-inline-block">
-                  <img height="30px" src="logo.png"</a>
+                <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                  <div class="brand-text d-none d-lg-inline-block"><img src="logo.png" height="30px;"></div>
+                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><img src="logo.png" height="20px;"></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -49,7 +53,10 @@
 
       <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <nav class="side-navbar shrinked">
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+
+          <!-- Sidebar Navidation Menus-->
           <ul class="list-unstyled">
                 <li><a href="/"> <i class="fas fa-home"></i>Home </a></li>
                 <li><a href="/devices"> <i class="fas fa-microchip"></i>My devices</a></li>
@@ -59,104 +66,95 @@
         </nav>
 
         <div class="content-inner">
-                       <main role="main">
-
-  <!-- Page Header-->
+                     
+  <!-- Page Header
   <header class="page-header">
     <div class="container-fluid">
       <h2 class="no-margin-bottom">Forecast dashboard</h2>
     </div>
   </header>
+  
+  -->
   <!-- Dashboard Counts Section-->
   <section class="dashboard-counts no-padding-bottom">
     <div class="container-fluid">
          <div class="row bg-white has-shadow">
-            <span><a class="btn btn-default btn-xs" href="/setup/location">Setup Account</a></span>
+             <h2>Welcome to ecopush ! Please <a href="/setup/location">setup your account</a> in order to use ecopush plugs.</h2>
          </div>
-
-      <br />
-      <div class="row bg-white has-shadow">
-        <!-- Item -->
-        <div class="col-xl-3 col-sm-6">
-          <div class="item d-flex align-items-center">
-            <div class="icon bg-violet"><i class="icon-user"></i></div>
-            <div class="title"><span>My<br> Devices</span>
-              <div class="progress">
-                <div role="progressbar" style="width: 100%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-              </div>
-            </div>
-            <div class="number"><strong>3</strong></div>
-          </div>
-        </div>
-        <!-- Item -->
-        <div class="col-xl-3 col-sm-6">
-          <div class="item d-flex align-items-center">
-            <div class="icon bg-red"><i class="icon-padnote"></i></div>
-            <div class="title"><span>Carbon<br>Intensity</span>
-              <div class="progress">
-                <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
-              </div>
-            </div>
-            <div class="number"><strong>294</strong> <br/><small>gCO2/kWh</small></div>
-          </div>
-        </div>
-        <!-- Item -->
-        <div class="col-xl-3 col-sm-6">
-          <div class="item d-flex align-items-center">
-            <div class="icon bg-green"><i class="icon-bill"></i></div>
-            <div class="title"><span>Renewable<br>Production</span>
-              <div class="progress">
-                <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-              </div>
-            </div>
-            <div class="number"><strong>6.78 GW</strong></div>
-          </div>
-        </div>
-        <!-- Item -->
-        <div class="col-xl-3 col-sm-6">
-          <div class="item d-flex align-items-center">
-            <div class="icon bg-orange"><i class="icon-check"></i></div>
-            <div class="title"><span>Solar<br>production</span>
-              <div class="progress">
-                <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-              </div>
-            </div>
-            <div class="number"><strong>2.76 GW</strong></div>
-          </div>
-        </div>
-      </div>
-    </div>
+      
+        
+         
   </section>
   <!-- Dashboard Header Section    -->
   <section class="dashboard-header">
     <div class="container-fluid">
       <div class="row">
         <!-- Statistics -->
-        <!-- Line Chart            -->
-        <div class="chart col-lg-6 col-12">
-          <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
-            <canvas id="carbonChart"></canvas>
-            <script>
-            $(document).ready(function () {
-                window.drawCarbonGraph("#carbonChart", window.dayLabels(), "Carbon (gCo2 per kWh)", [251,252,244,242,240,240,240,241,242,240,224,234,246,252,256,255,256,257,256,261,265,262,264,262,259,255,253,251,249,242,235,237,236,238,239,240,239,237,234,232,234,226,218,197,186,179,174,165], "#44c384")
-             })
-            </script>
-          </div>
+                <div class="statistics col-lg-3 col-12">
+                  <div class="statistic d-flex align-items-center bg-white has-shadow">
+                    <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
+                    <div class="text"><strong>0</strong><br><small>Devices</small></div>
+                  </div>
+                  <div class="statistic d-flex align-items-center bg-white has-shadow">
+                    <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
+                    <div class="text"><strong>294 gCO2/kWh</strong><br><small>Carbon Density</small></div>
+                  </div>
+                  <div class="statistic d-flex align-items-center bg-white has-shadow">
+                    <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
+                    <div class="text"><strong>6.78 GW</strong><br><small>Renewable Production</small></div>
+                  </div>
+                </div>
+                <!-- Line Chart            -->
+        <div class="chart col-lg-9 col-12">
+         
+         
+                    <div class="line-chart-example card">
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">UK Carbon Emission Data last 24 hours</h3>
+                    </div>
+                    <div class="card-body"><div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                     <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                     <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div>
+                     <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <canvas id="carbonChart" class="chartjs-render-monitor"></canvas>
+                    </div>
+                  </div>
         </div>
-         <!-- Line Chart            -->
-        <div class="chart col-lg-6 col-12">
-          <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
-            <canvas id="priceChart"></canvas>
+                
+                
             <script>
+         
+            $(document).ready(function () {
+             window.drawCarbonGraph("#carbonChart", window.dayLabels(), "Carbon (gCo2 per kWh)", [251,252,244,242,240,240,240,241,242,240,224,234,246,252,256,255,256,257,256,261,265,262,264,262,259,255,253,251,249,242,235,237,236,238,239,240,239,237,234,232,234,226,218,197,186,179,174,165], "#44c384")
+             
+            
+      });
+            </script>
+         <!-- Line Chart            -->
+         
+    <div class="container-fluid">     
+    <div class="col-lg-12">
+                  <div class="line-chart-example card">
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Energy Price last 24 hours</h3>
+                      
+                    </div>
+                
+                    <div class="card-body"><div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor">
+                     <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                     <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div>
+                     <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <canvas id="priceChart" style="display: block; height: 374px; width: 749px;" width="1498" height="748" class="chartjs-render-monitor"></canvas>
+                    </div>
+                  </div>
+                </div>
+      </div>          
+
+                      <script>
                 $(document).ready(function () {
                     window.drawCarbonGraph("#priceChart", window.dayLabels(), "Price (p per kWh)", [6.2,6.2,6.2,6.2,5.76,5.76,5.62,5.62,6.42,6.5,7.2,6.88,7.32,7.34,9.4,9.4,9.2,9.22,7.74,7.74,7.23,7.24,7.31,7.31,6.49,6.48,6.4,6.4,6.4,6.4,19.54,21.14,23.58,23.58,22.95,23,11.3,11.3,8.95,8.83,8.4,8,7.3,7.1,7,7.09,7.12,6.9], "#4544c3")
                  })
-                </script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>            </main>
+                </script>          
 
           <!-- Page Footer-->
           <footer class="main-footer">
@@ -174,8 +172,7 @@
           </footer>
 
          </div>
-        </div>
-      </div>
+
     <script src="/js/app.js"></script>
   <iframe src="/phoenix/live_reload/frame" style="display: none;"></iframe>
 </body>

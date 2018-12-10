@@ -103,7 +103,7 @@ var legendState = true;
             datasets: [
                 {
                     label: title,
-                    fill: true,
+                    fill: true,              
                     lineTension: 0,
                     backgroundColor: "transparent",
                     borderColor: lineColour,
@@ -112,14 +112,14 @@ var legendState = true;
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
-                    borderWidth: 1,
+                    borderWidth: 5,
                     pointBorderColor: lineColour,
                     pointBackgroundColor: "#fff",
                     pointBorderWidth: 1,
                     pointHoverRadius: 5,
                     pointHoverBorderColor: "#fff",
-                    pointHoverBorderWidth: 2,
-                    pointRadius: 1,
+                    pointHoverBorderWidth: 5,
+                    pointRadius: 2,
                     pointHitRadius: 10,
                     data: data,
                     spanGaps: false
@@ -167,4 +167,11 @@ $(document).ready(function () {
         });
 
 
+
+
+
 });
+
+
+
+
