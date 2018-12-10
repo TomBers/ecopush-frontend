@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,36 +64,76 @@
   <h2 class="no-margin-bottom">Emission data</h2>
 </div>
 </header>
+  
 
 <section class="dashboard-counts no-padding-bottom">
 <div class="container-fluid">
-  <div class="chart col-lg-10 col-12">
-        <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+ <div class="row">
+  <div class="col-lg-9 col-12">
+        <div class="card">
+
+                    <div class="card-body">
+                    
                 <canvas id="myChart"></canvas>
         </div>
-            <table style="width:100%; margin-bottom:20px">
-              <tr>
-                <th>Device name</th>
+        
+      </div>
+    </div>         
+         
+ 
+<div class="col-lg-3 col-12"> 
+ <div class="card">
+
+                    <div class="card-body">
+                                             
+                      <div class="table-responsive">  
+                        <table class="table table-striped table-hover">
+                          <thead>
+                            <tr>
                 <th>Start time</th>
                 <th>End time</th>
               </tr>
-              <tr class="schedule_row">
-                <td>alpha4</td>
+                            </thead>
+              <tr>
                 <td>03:30</td>
                 <td>05:30</td>
               </tr>
-              <tr class="schedule_row">
-                <td>alpha4</td>
+              <tr>
                 <td>10:00</td>
                 <td>12:00</td>
               </tr>
-              <tr class="schedule_row">
-                <td>alpha4</td>
+              <tr>
                 <td>18:00</td>
                 <td>20:00</td>
               </tr>
             </table>
      </div>
+     </div>
+     </div>
+     
+     
+     <div class="articles card">
+                    <div class="card-close">
+                    </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h2 class="h3">Other Devices</h2>
+                     
+                    </div>
+                    <div class="card-body no-padding">
+                      <div class="item d-flex align-items-center">
+                         <div class="text"><a href="#">
+                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Aria Smith.   </small></div>
+                      </div>
+                      <div class="item d-flex align-items-center">
+                        <div class="text"><a href="#">
+                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Frank Williams.   </small></div>
+                      </div>
+                      <div class="item d-flex align-items-center">
+                        <div class="text"><a href="#">
+                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by Ashley Wood.   </small></div>
+                      </div>
+                      </div>
+</div> 
     </div>
   </section>
 <script>
@@ -552,8 +591,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var datasets = [{
         label: "Emission data",
-        backgroundColor: 'rgb(0,123,255,0.6)',
-        borderColor: 'rgb(0,123,255,0.6)',
+        backgroundColor: '#bdbfc3',
+        borderColor: '#bdbfc3',
         fill: false,
         data: data,
     }]
@@ -566,11 +605,9 @@ document.addEventListener("DOMContentLoaded", function(){
         data: schedule
       })
     )
-    window.drawLineGraph('myChart', window.dayLabels(), datasets);
+    window.drawLineGraph('myChart', window.dayLabels(), datasets, false);
 
-    // Colour each row with the desired colour
-    Array.from(document.getElementsByClassName("schedule_row")).forEach((ele, i) => ele.style.backgroundColor = window.getColour(i));
-
+ 
 });
 </script>
             </main>

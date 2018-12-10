@@ -90,7 +90,7 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Statistics -->
-                <div class="statistics col-lg-3 col-12">
+                <div class="statistics col-lg-4 col-12">
                   <div class="statistic d-flex align-items-center bg-white has-shadow">
                     <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
                     <div class="text"><strong>0</strong><br><small>Devices</small></div>
@@ -100,12 +100,28 @@
                     <div class="text"><strong>294 gCO2/kWh</strong><br><small>Carbon Density</small></div>
                   </div>
                   <div class="statistic d-flex align-items-center bg-white has-shadow">
-                    <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                    <div class="text"><strong>6.78 GW</strong><br><small>Renewable Production</small></div>
+                     <canvas id="myChart" style="height:400px"></canvas>
                   </div>
+                
+                
                 </div>
                 <!-- Line Chart            -->
-        <div class="chart col-lg-9 col-12">
+                
+                
+              
+<script>            
+document.addEventListener("DOMContentLoaded", function(){
+    var data = [];
+    var labels = [];
+    var datasets = [];
+    
+    window.drawPieGraph('myChart', labels, datasets);
+    });
+    
+</script>              
+               
+                
+        <div class="chart col-lg-8 col-12">
          
          
                     <div class="line-chart-example card">
@@ -132,7 +148,24 @@
             </script>
          <!-- Line Chart            -->
          
+         
+      <!-- Dashboard Counts Section-->
     <div class="container-fluid">     
+      <div class="row">
+       <div class="col-lg-12">
+         <div class="call-out has-shadow">
+             <h2>Set up your Octopus Energy account <a href="#">here</a></h2>
+         </div>
+       </div> 
+       </div> 
+    </div>
+        
+         
+
+             
+         
+    <div class="container-fluid">     
+      <div class="row">
     <div class="col-lg-12">
                   <div class="line-chart-example card">
                     <div class="card-header d-flex align-items-center">
@@ -149,7 +182,7 @@
                   </div>
                 </div>
       </div>          
-
+     </div> 
                       <script>
                 $(document).ready(function () {
                     window.drawCarbonGraph("#priceChart", window.dayLabels(), "Price (p per kWh)", [6.2,6.2,6.2,6.2,5.76,5.76,5.62,5.62,6.42,6.5,7.2,6.88,7.32,7.34,9.4,9.4,9.2,9.22,7.74,7.74,7.23,7.24,7.31,7.31,6.49,6.48,6.4,6.4,6.4,6.4,19.54,21.14,23.58,23.58,22.95,23,11.3,11.3,8.95,8.83,8.4,8,7.3,7.1,7,7.09,7.12,6.9], "#4544c3")

@@ -1,4 +1,4 @@
-function drawLineGraph(divID, labels, datasets) {
+function drawLineGraph(divID, labels, datasets,legend) {
     var ctx = document.getElementById(divID).getContext('2d');
     var chart = new Chart(ctx, {
         type: 'line',
@@ -6,9 +6,55 @@ function drawLineGraph(divID, labels, datasets) {
             labels: labels,
             datasets: datasets
         },
-        options: {}
+        options: {
+        legend: {
+            display: legend,
+         }
+        }
     });
 }
+
+function drawPieGraph(divID, labels, datasets) {
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+    	var ctx = document.getElementById(divID).getContext('2d');
+    	var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            
+            labels: [
+					'green',
+					'nuclear',
+					'fossil',
+				],
+			
+            datasets: [
+                {
+    			data: [
+						'20',
+						'30',
+						'50',
+
+				],
+				backgroundColor: [
+						"#19c587", 
+						"#fa5e5e", 
+						"#63769c", 
+
+				],
+			}],
+        },
+		options: {
+			responsive: true,
+			cutoutPercentage: 0,
+			legend: {
+            position: 'left',
+            }	
+		}
+    });
+}
+		
 
 function drawBarGraph(divID, barChartData) {
     var ctx = document.getElementById(divID).getContext('2d');
@@ -29,6 +75,7 @@ function drawBarGraph(divID, barChartData) {
 
 
 function getColour(indx) {
+  return 'rgb(25,197,135,0.6)';
   var colours = ["rgb(121,106,238,0.6)", "rgb(84,230,157,0.6)", "rgb(255,195,109,0.6)", "rgb(255,173,173,0.6)", "rgb(174,199,159,0.6)", "rgb(253,214,147,0.6)"]
   if (indx <= colours.length) {
     return colours[indx]
