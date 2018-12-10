@@ -60,41 +60,74 @@
 
         <div class="content-inner">
                        <main role="main">
+                       
+                       
+                       
+                       
 <header class="page-header">
     <div class="container-fluid">
+       
         <h2 class="no-margin-bottom">Advanced Device parameters</h2>
     </div>
 </header>
 
-<section class="dashboard-counts no-padding-bottom">
-   <div class="container-fluid">
-    <div class="row bg-white has-shadow">
+
+          <section class="forms"> 
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Basic Form-->
+        
+            
+                <div class="col-lg-12">
+                  <div class="card">
+                   
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Optimisation strategy</h3>
+                    </div>
+                    
+<div class="card-body">                    
 <form accept-charset="UTF-8" action="/devices/2" method="post"><input name="_method" type="hidden" value="put"><input name="_csrf_token" type="hidden" value="QxY3ID55JhxPETBWeTkdGXxdIlIPJgAA0yYjkHAt8guoKK2LMhk6ig=="><input name="_utf8" type="hidden" value="✓">
 
   <div class="form-group">
-<label class="control-label" for="device_Optimisation strategy">Optimisation strategy</label>    <select class="form-control mb-3" id="device_type" name="device[type]"><option value="GREEN" selected>Lowest CO2 emissions</option></select>
+   <select class="form-control mb-3" id="device_type" name="device[type]">
+   <option value="GREEN" selected>Lowest CO2 emissions</option></select>
   </div>
+</div>
+     <div class="card-body">              
+                      <h3 class="h4">Duration</h3>
+ <div class="row">              
+ <div class="col-lg-6">
 
   <div class="form-group">
-<label class="control-label" for="device_Duration of overnight charge (mins)">Duration of overnight charge (mins)</label>    <input id="device_duration" name="device[duration]" type="text" value="120">
+  
+  
+<label class="control-label" for="device_Duration of overnight charge (mins)">Device on for at least (min)</label>
+     <input   class="form-control form-control-sm" id="device_duration" name="device[duration]" type="text" value="120">
   </div>
-
+  
+  </div>
+ <div class="col-lg-6">
   <div class="well">
     <div class="form-group">
-      <h4>Time limits</h4>
-<label class="control-label" for="device_Start after">Start after</label>      <input id="device_start_at" name="device[start_at]" type="time" value="00:00">
+
+<label class="control-label" for="device_Start after">Start after</label>      
+   <input id="device_start_at" name="device[start_at]" type="time" value="00:00"  class="form-control form-control-sm">
     </div>
 
     <div class="form-group">
-<label class="control-label" for="device_End before">End before</label>      <input id="device_end_at" name="device[end_at]" type="time" value="23:59">
+<label class="control-label" for="device_End before">End before</label>      
+   <input id="device_end_at" name="device[end_at]" type="time" value="23:59"  class="form-control form-control-sm">
     </div>
   </div>
 
 
   <div class="form-group">
 <button class="btn btn-primary" type="submit">Submit</button>  </div>
-</form>    </div>
-  </div>
+</div>
+</div>
+   </div>
+  </div>  </div>  </div>
+</form>   
 </section>            </main>
 
           <!-- Page Footer-->
